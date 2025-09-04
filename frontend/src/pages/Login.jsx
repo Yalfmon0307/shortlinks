@@ -15,7 +15,7 @@ export default function Login() {
     setMessage('');
     setLoading(true);
     try {
-      const res = await fetch('http://localhost:3000/login', {
+      const res = await fetch('/shortlinks/api/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password }),
@@ -25,7 +25,7 @@ export default function Login() {
       if (res.ok) {
         // Consultar /me y actualizar el contexto
         try {
-          const meRes = await fetch('http://localhost:3000/me', { credentials: 'include' });
+          const meRes = await fetch('/shortlinks/api/me', { credentials: 'include' });
           if (meRes.ok) {
             const meData = await meRes.json();
             setUser(meData.user);

@@ -13,7 +13,7 @@ export default function Panel() {
 			setLoading(true);
 			setError('');
 			try {
-				const res = await fetch('http://localhost:3000/user/shortlinks', {
+				const res = await fetch('/shortlinks/api/user/shortlinks', {
 					credentials: 'include',
 				});
 				const data = await res.json();

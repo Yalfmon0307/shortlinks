@@ -27,7 +27,7 @@ export default function Index() {
 		setError('');
 		setShortlink('');
 		try {
-			const res = await fetch('http://localhost:3000/shortlink', {
+			const res = await fetch('/shortlinks/api/shortlink', {
 				method: 'POST',
 				headers: { 'Content-Type': 'application/json' },
 				body: JSON.stringify({ original_url: originalUrl }),
