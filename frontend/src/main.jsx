@@ -14,13 +14,13 @@ const router = createBrowserRouter([
     path: '/',
     element: <Layout />,
     children: [
-  { index: true, element: <Index /> },
-  { path: 'login', element: <Login /> },
-  { path: 'register', element: <Register /> },
-  { path: 'panel', element: <Panel /> },
+      { index: true, element: <Index /> },
+      { path: 'login', element: <Login /> },
+      { path: 'register', element: <Register /> },
+      { path: 'panel', element: <Panel /> },
     ],
   },
-]);
+], { basename: '/shortlinks' });
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
