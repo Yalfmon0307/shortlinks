@@ -37,7 +37,7 @@ export default function Index() {
 			});
 			const data = await res.json();
 			if (res.ok) {
-				setShortlink(`/shortlinks/${data.short_code}`);
+				setShortlink(`/${data.short_code}`);
 			} else {
 				setError(data.error?.[0]?.message || 'Error al crear el shortlink');
 			}
