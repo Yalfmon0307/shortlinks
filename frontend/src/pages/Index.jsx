@@ -1,5 +1,7 @@
 
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
+
 
 function CopyIcon({ copied }) {
 	return (
@@ -79,7 +81,6 @@ export default function Index() {
 							 <div style={{ marginTop: 32, textAlign: 'center', background: '#f1f5fb', padding: 18, borderRadius: 8, boxShadow: '0 2px 8px #007bff22', position: 'relative' }}>
 								 <strong style={{ color: '#007bff', fontSize: 16 }}>Tu Shortlink:</strong>
 								 <div style={{ marginTop: 8, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8 }}>
-									import { Link } from 'react-router-dom';
 									...existing code...
 									<Link to={shortlink} target="_blank" rel="noopener noreferrer" style={{ color: '#007bff', fontWeight: 600, fontSize: 18, wordBreak: 'break-all', textDecoration: 'underline' }}>{shortlink}</Link>
 									 <span onClick={handleCopy} title="Copiar" style={{ display: 'inline-flex', alignItems: 'center' }}>
