@@ -13,7 +13,7 @@ app.use(cors({
 }));
 app.use(express.json());
 app.use(cookieParser());
-app.use('/', router);
+app.use('/api', router);
 
 app.listen(PORT, () => {
 	console.log(`Server listening on port ${PORT}`);
