@@ -35,7 +35,7 @@ export default function Index() {
 			});
 			const data = await res.json();
 			if (res.ok) {
-				setShortlink(`http://localhost:3000/${data.short_code}`);
+				setShortlink(`/shortlinks/${data.short_code}`);
 			} else {
 				setError(data.error?.[0]?.message || 'Error al crear el shortlink');
 			}
@@ -81,7 +81,7 @@ export default function Index() {
 								 <div style={{ marginTop: 8, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8 }}>
 									import { Link } from 'react-router-dom';
 									...existing code...
-									<Link to={shortlink.replace('http://localhost:3000', '')} target="_blank" rel="noopener noreferrer" style={{ color: '#007bff', fontWeight: 600, fontSize: 18, wordBreak: 'break-all', textDecoration: 'underline' }}>{shortlink}</Link>
+									<Link to={shortlink} target="_blank" rel="noopener noreferrer" style={{ color: '#007bff', fontWeight: 600, fontSize: 18, wordBreak: 'break-all', textDecoration: 'underline' }}>{shortlink}</Link>
 									 <span onClick={handleCopy} title="Copiar" style={{ display: 'inline-flex', alignItems: 'center' }}>
 										 <CopyIcon copied={copied} />
 									 </span>

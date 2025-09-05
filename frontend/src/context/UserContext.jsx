@@ -9,7 +9,7 @@ export function UserProvider({ children }) {
   useEffect(() => {
     async function fetchUser() {
       try {
-        const res = await fetch('http://localhost:3000/me', {
+  const res = await fetch('/shortlinks/api/me', {
           credentials: 'include',
         });
         if (res.ok) {
@@ -32,7 +32,7 @@ export function UserProvider({ children }) {
 
   async function logout() {
     try {
-      await fetch('http://localhost:3000/logout', {
+  await fetch('/shortlinks/api/logout', {
         method: 'POST',
         credentials: 'include',
       });
